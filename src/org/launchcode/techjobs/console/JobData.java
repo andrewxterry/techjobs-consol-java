@@ -99,8 +99,9 @@ public class JobData {
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);
+            String lowerAValue = aValue.toLowerCase();
 
-            if (aValue.contains(value)) {
+            if (lowerAValue.contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
